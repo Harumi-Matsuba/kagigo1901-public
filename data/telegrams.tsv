@@ -1,0 +1,6 @@
+ref	frame	date	from_to	type	digits	translation	reading	status
+C09122909900	0079 (form), 0078 (translation)	1902-03-28	Osaka: Chief of Staff Oyama -> Maj.-Gen. Fukushima	partial cipher, 2 digits = 1 kana	24 (12 pairs) + 80	yes	カイグンエンシウケンガク (11/12; イ written 17, table 19)	partial reading
+C09122911500	0110 (form), 0108 (translation)	1902-03-27	Osaka: Oyama -> Lt.-Gen. Terauchi	whole text in digits	68 (34 pairs) + 80	yes	ホンシヨクキヨウマデホンブノジムハキクワンヨロシクトリハカラハレタシ (34/34)	full reading
+C03020059400	0119	1904-01 (file dated 1904-01-10..22)	Division commander Inoue -> War Minister (Moji anchorage HQ)	partial cipher	24 (12 pairs)	yes (translation in the same file)	シンテイアクゼウシレイブ = 辛碇泊場司令部 (10/12)	partial reading
+C09123116600	0026 (form), 0025 (reply draft)	1904-01-25	Kokura: "ヲハラ" -> Maj.-Gen. Iguchi, General Staff	partial cipher	26 (13 pairs)	no	ヨヨウノカンコクチズダイヨ = 要用ノ韓国地図貸与	full reading (no translation; checked against the reply draft)
+C09122806100	0245-0246 (form), 0244 (translation)	1901-02-18	Hiroshima: Maj.-Gen. Manabe -> Maj.-Gen. Tamura	partial cipher, 2 digits = 1 kana (inferred)	30 (15 pairs)	yes	not read; not the 1902 table	unread
