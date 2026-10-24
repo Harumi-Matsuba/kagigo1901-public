@@ -25,13 +25,13 @@ All sources are from JACAR (Japan Center for Asian Historical Records; held by t
 - Delivery slip (frame 0079): sending office オウサカ (Osaka), No. 819, 28 March, 33 characters (consistent with 10 + 10 + 10 + 3).
 - Text: 08 17 79 10 39 10 17 29 38 10 59 28 ｜ ソ（ノ）ケンキヨカス ｜ 80
 - Reading: カ シ グ ン エ ン シ ウ ケ ン ガ ク → following the furigana of the outgoing telegram, 「カイグンエンシウケンガク」 (naval exercise observation). Decoded text (frame 0078): 「海軍演習ニ見学者出ス件 許可ス」 (Permission granted for sending observers to the naval exercise).
-- One pair that does not agree: 17 in the 2nd pair. In the table イ = 19 and 17 is シ. The image also shows 七 (all three character judgments were 七). Taken to be an error by the writer or in transmission (conjecture).
+- One pair that does not agree: 17 in the 2nd pair. In the table イ = 19 and 17 is シ. The image also shows 七 (all three character judgments were 七). Taken to be an error by the writer or in transmission (conjecture). Tomokiyo Satoshi reads 14 (ヒ, カヒグン) ([OPEN.en.md](OPEN.en.md) §2); neither gives イ.
 
 ## 4. C03020059400 — 1904-01, Division Commander Inoue → Minister of the Army (partial reading)
 - File: Army Ministry Daijiki (records), 『明治３７年 満密大日記 明治３７年 １月』. Title: 「碇泊場司令部編成之件」 (Organization of the anchorage headquarters). 23 frames (0118–0140). The telegram is in frame 0119. Decoded text in the catalogue: 「辛碇泊場司令部ニ要スル下士以下及器具材料ハ門司補給廠支廠長ニ交付済…」.
-- Digits in the text: 17 10 36 19 09 28 88 29 17 31 19 76 (kana follow)
-- Reading: シ ン テ イ ア ク ゼ ウ シ レ イ ブ. Set beside the decoded text 「辛碇泊場司令部」 (シンテイハクジウシレイブ; 場 is spelled ジウ), 10 of 12 agree.
-- Two pairs that do not agree: 09 (in the table ア; for the plain-text ハ it would be 04) and 88 (in the table ゼ; for the plain-text ジ it would be 68). In each case a single digit differs. The image shows 〇九 and 八八. Since 「九」 was suspected of being 「四」, it was set beside the 10 digits of the same writer and judged by Codex twice and Sonnet twice; in all four judgments the first candidate was 九 (`second/codex/runN1.txt`, `runN2.txt`). Taken to be an error by the writer or in transmission (conjecture).
+- Digits in the text: 17 10 36 19 04 28 88 29 17 31 19 76 (kana follow; the 5th pair was 09 in the first transcription and was changed to 04 following Tomokiyo Satoshi's reading of the image, 2026-10-25)
+- Reading: シ ン テ イ ハ ク ゼ ウ シ レ イ ブ. Set beside the decoded text 「辛碇泊場司令部」, 12 of 12 agree (場 is spelled ゼウ, as in どぜう; pointed out by Tomokiyo).
+- The earlier version (2026-10-20) had 09 (ア) for the 5th pair and took 88 as a slip for ジウ, giving 10/12. Judged beside ten digits of the same writer, Codex twice and Sonnet twice gave 九 as first candidate (`second/codex/runN1.txt`, `runN2.txt`; the samples contained no 四). It was changed to 四 following the human reading. See [OPEN.en.md](OPEN.en.md) §3.
 
 ## 5. C09122806100 — 1901-02-18, Hiroshima, Major General Manabe → Major General Tamura (unread)
 - File: 『明治３４年 電報綴 北清事件』. 3 frames (0244: decoded text; 0245–0246: two telegram forms).

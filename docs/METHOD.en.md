@@ -16,7 +16,7 @@
 - Neither this table nor a method of adding a periodic digit (period 1–7) to the table fits C09122806100 (1901-02).
 
 ## 3. Control tests
-- Permutation control (`src/table1902.py`): tables in which the 5 vowel-row digits, the 10 row digits and the 4 row digits of the voiced consonants were randomly permuted were used, and the number of times (out of 1000) that the agreement with the decoded text equals or exceeds that of the real table was counted. C09122911500: 0 times (maximum 16, real 35). C09122909900: 0 times (maximum 7, real 11; but the table was built from this telegram, so this is only a guide). C03020059400: 0 times (maximum 5, real 10).
+- Permutation control (`src/table1902.py`): tables in which the 5 vowel-row digits, the 10 row digits and the 4 row digits of the voiced consonants were randomly permuted were used, and the number of times (out of 1000) that the agreement with the decoded text equals or exceeds that of the real table was counted. C09122911500: 0 times (maximum 16, real 35). C09122909900: 0 times (maximum 7, real 11; but the table was built from this telegram, so this is only a guide). C03020059400: 0 times (maximum 5, real 12; real 10 before the correction of 2026-10-25).
 - C09123116600, which has no decoded text: plain-text kana (18,810 characters) were collected from the telegrams in the JACAR catalogue content field, and a likelihood for sequences of 2 kana was built. The number of permuted tables that reached the reading from the real table (−42.8) or better was 0 out of 1000; the best was −46.0. The kana used for training are sentences from the JACAR catalogue and are not included in this repository.
   - In the first version, ン and ヰ were both 10 in the table, ヰ appeared in the reading, and 12 permuted tables were at or above the real one. The 0 times above is the value from a run after correcting this by giving priority to ン and penalizing values not in the table.
 
@@ -37,14 +37,14 @@
 - For characters on which the transcriptions differed, each character was cut out with its value hidden and judged by Codex and Sonnet (twice, in separate contexts). There was no place where the two judgments agreed on a character different from the first transcription, and the first transcription was not corrected (number corrected: 0).
 
 ## 5. Calibration
-- The contemporary decoded texts (three telegrams) and the furigana of the outgoing telegram (C09122909900) were used for calibration. Character agreement: C09122911500 35/35, C09122909900 11/12, C03020059400 10/12. C09123116600 has no decoded text, so there is no calibration.
+- The contemporary decoded texts (three telegrams) and the furigana of the outgoing telegram (C09122909900) were used for calibration. Character agreement: C09122911500 35/35, C09122909900 11/12, C03020059400 12/12 (after one character was corrected following Tomokiyo Satoshi's reading of the image and ゼウ was accepted as a spelling, 2026-10-25; earlier 10/12). C09123116600 has no decoded text, so there is no calibration.
 
 ## 6. Relation to Yakugō (鑰号) (conjecture)
 - The Yakugō (鑰号) cipher was printed in June 1900 as a revision of Butsugō (物号), and was used from January 1901 to June 1904 (JACAR C09122592800, C10061983200, C06040646600). In September 1900, while in use, it was described as 「秘密ヲ守ルノ点ニ於テハ頗ル確実ナルモ使用上甚タ不便」 (very reliable as regards keeping secrecy, but very inconvenient in use). The attached 「乙号」 had the 「鑰語標点」, which staff officers memorized (C02030445900, 1901-03).
 - This table is simple and did not change from March 1902 to January 1904. It cannot be decided whether it is a use, without the key, of a method in which the key (鑰語) changes the values, or a different cipher (the 「数字ノ分」 of Tokugō (特号), thought to be the successor of Kongō (坤号), C03025477100).
 
 ## 7. Limits
-- No human has checked the transcriptions. Agreement among AIs is no substitute for human checking.
+- Human checking is partial: Tomokiyo Satoshi published readings made by eye from the images on Cryptiana (2026-10-24), and one character was corrected accordingly. Agreement among AIs is no substitute for human checking.
 - The sample is four telegrams (66 pairs). Of the values in the table, only some actually appeared (parts of the ア, カ, サ, タ, ナ, ハ, マ, ヤ, ラ and ワ rows, and parts of the voiced ガ, ザ, ダ and バ rows). The values that did not appear are inferences from the rules.
 - The JACAR images are binarized (JBIG2), so thin marks and the presence of dakuten are hard to tell.
 - The survey is limited to the ranges above. Items in the 1904 files of the Army Ministry Daijiki that did not match the search have not been viewed.

@@ -26,7 +26,9 @@ class TestTable(unittest.TestCase):
         g, p = T.TELEGRAMS['C09122909900']
         self.assertEqual(T.agreement(g, p), 11)
         g, p = T.TELEGRAMS['C03020059400']
-        self.assertEqual(T.agreement(g, p), 10)
+        self.assertEqual(T.agreement(g, p), 12)
+        # 1回目の 〇九 のままなら 11/12
+        self.assertEqual(T.agreement(['09' if x == '04' else x for x in g], p), 11)
 
     def test_shuffle_control(self):
         for rc, seed in T.SEEDS.items():
