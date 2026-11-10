@@ -54,3 +54,37 @@
 - OpenAI Codex: independent second transcription, judgment of characters.
 - Claude Sonnet: independent second transcription, judgment of characters, prior-work check (a separate context that did not take part in the decipherment).
 - Publisher: gave instructions on the direction of the work. Did not check the transcriptions or the readings.
+
+## 9. The 1901 table (added 2026-11-10)
+Correspondence and readings: [READING1901.en.md](READING1901.en.md); script: `src/table1901.py`.
+
+### 9.1 How it was found
+- Telegrams in romanised Japanese exchanged with officers stationed in China contain groups of five digits. In the survey of October 2026 these were taken for plain romaji telegrams and the digits were overlooked.
+- In C09122724200, which has a translation, both digit runs have 14 digits (5 + 5 + 4), matching the seven kana of each of the two words in the translation (独逸皇帝, 天皇陛下). The five-digit grouping is a transmission format; the unit is two digits. In the five outgoing drafts, too, all 23 digit runs are of even length.
+- Four telegrams from Maj.-Gen. Fukushima (C09122805800, 805900, 806000, 801000) have translations in the same file, and the recipient wrote kana beside the digits. Collecting the values from the translated words and these annotations gives ア00 カ01 ガ02 サ03 …: a running number through the syllabary by vowel rows, with each voiced kana right after its plain one (タ05 ダ06, ゲ42, ゼ44, ド59). The numbers 00-67 were filled in by this rule.
+
+### 9.2 Control
+- **Two telegrams the table was applied to after it was fixed** (not used to infer it): the ten pairs of C09122796200 and, from C09122806100, the two runs made only of values inside the table (ンチワ, フクム; six pairs). Agreement with the expected kana (the words of the translation in the spelling of the telegrams): 16/16. With the 68 kana of the table randomly permuted, none of 1,000 tables did as well (best: 4).
+- モ, ト and グ in C09122796200 occur in no other telegram; they were fixed beforehand by the rule of the arrangement alone.
+- The four telegrams used to infer the table give 42/42 (not a test, since they built the table). The 14 pairs of C09122724200 include digits re-read with the table in hand and are not counted.
+- The spelling of the expected kana (を as オ, the particle は as ハ or ワ) was settled after reading; in that respect it was not fixed blind.
+
+### 9.3 Independent second transcription
+- OpenAI Codex (codex-cli 0.163.0-alpha.10.2, model gpt-6-astra, reasoning effort high) was given the image of the message field of each of the six telegrams received from China, one at a time, from an empty directory. It was not given the table, the first transcription or the translations. The run logs show no command execution and no file reads. Prompt: `second/PROMPT1901.md`; answers: `second/codex1901/` (run1_ = the six images of the first run, run2_ = the four enlarged images). The images show the recipient's kana annotations (the prompt says to ignore them).
+- Agreement of digits (first transcription as reference, edit distance): six telegrams together 123/135 (91.1%); by telegram C09122805800 48/49, C09122805900 7/8, C09122806000 8/8, C09122796200 19/20, C09122801000 17/22 (77.3%), C09122724200 24/28 (85.7%).
+- The digits that differed were looked at again on enlarged images by the first reader (Claude) and left as first read (no digit changed). No judgement by another model was made.
+- The two telegrams with the lowest agreement (C09122801000, C09122724200) were read once more, with the same prompt, from four enlarged images (the top two lines cut into a left and a right half). The cut split the groups and the answers were fragments: C09122801000 15/20 of the digits inside the crops (75.0%), C09122724200 25/28 (89.3%). Both runs are given; the better one is not selected.
+- So for C09122801000 (ゲンスイガ, コウテイヨリ) the agreement with the second reader is 75.0-77.3%, below 90%. In C09122724200 Codex both times read a "7" before the second group of the first run (59153 7 25427 4515) and read the first group of the second run as 4507x. The reading given here (59153 25427 4515, 45676) was made with the table in hand; these two points are not settled. The table values that occur only in these two telegrams (カ ガ リ ス ツ ゲ ヘ コ ド ヨ, ten values) are weaker to that extent.
+- The contemporary translations and the recipient's annotations are what the readings rest on. Agreement among AIs is no substitute for human checking.
+
+### 9.4 Limits
+- No human has checked the transcriptions.
+- The sample is seven telegrams, 72 pairs (leaving out the values outside the table in C09122806100). 38 of the 68 values are attested.
+- These telegrams were read at the time; what is new here is only the reconstruction of the table. The name of the table (whether it is the numeric part of the Tokugō cipher) is not confirmed.
+- The five outgoing drafts are not read ([OPEN.en.md](OPEN.en.md)).
+
+### 9.5 Use of AI (1901 table)
+- Claude Fable 5.2 (Anthropic): transcription of the images (first), inference of the table, control, writing of the documents.
+- OpenAI Codex (gpt-6-astra, reasoning effort high): independent second transcription.
+- Claude Sonnet: prior-work check (a separate reader that took no part in rebuilding the table).
+- Publisher: gave instructions on the direction of the work. Did not check the transcriptions or the readings.

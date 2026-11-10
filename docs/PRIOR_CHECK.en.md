@@ -43,3 +43,30 @@ Main grounds:
 - **Google Books:** not tried.
 - **Bulletins, coterie magazines and personal sites not in CiNii:** there is no means of searching them. Mr. Tomokiyo of Cryptiana has not been contacted.
 - The images of the four papers by Ōno Tetsuya and of the documents Cryptiana cites (such as the 1894 telegrams, C06060666300) were not opened in this check.
+
+---
+
+# Addition: the 1901 table (2026-11-10)
+
+Date of check: 2026-11-10. Checker: a separate reader (Claude Sonnet) who took no part in rebuilding the table. It received the table (00 ア to 67 ン) and the reference codes of the seven telegrams, and searched with the intention of showing that this had already been published. The ledger part was repeated by the side that rebuilt the table, on the latest version (origin/main 77d4c6c39, 2026-11-10 04:17 UTC).
+
+## Category: the readings exist (contemporary translations); no publication of this table was found
+- All seven telegrams have their contemporary translations, which are also transcribed in the JACAR catalogue records. The telegrams were read at the time; what is new here is only the reconstruction of the table.
+- No source in the range below gives the table itself (the syllabary by vowel rows, voiced and half-voiced kana right after the plain ones, numbered from 00). No claim of priority is made.
+
+## Sources searched and results
+- **Cryptiana (Satoshi Tomokiyo)**
+  - meijiarmy2.htm (2026-10-24): the page on the 1902-04 table (row/column coordinates). C09122806100 is headed "An Unidentified Code", "This appears to be in some different code"; no table is reconstructed. The other six reference codes do not occur.
+  - meijiarmy.htm: the "Tokugō cipher (numeric part)" is thought to be the successor of the Kongō cipher, "but unknown". No table. The reconstructed 1894 numeric cipher is numbered differently (in the Fukushima example on that page: い01, ま41, や40, あ52, ん69).
+  - meijijapan2.htm: the Foreign Ministry's 1904 kana code (one kana = two digits, sent in groups of five, two tables). The layout is close; the grid is different.
+  - unsolved.htm (last updated 2026-11-05): no mention of Tokugō, 1901, Fukushima or C091228.
+- **Cyphersolver ledger** (origin/main 77d4c6c39): C09122805800, C09122805900, C09122806000, C09122801000, C09122796200, C09122724200: no hits. C09122806100 only as "not read with the 1902 table" in targets/army1902. Catalogue 715 (the five drafts sent by the General Staff): "no decipherment, key or Japanese reading". Nothing in issues or pull requests.
+- **GitHub**: code search (特号暗号, "53645 83718", "00161 21108", the reference codes): none. Repository search: only this repository.
+- **Web search** (four searches, Japanese and English): no table or paper found.
+- **JACAR catalogue records** (seven): the content field is the transcribed translation; no digit-to-kana correspondence or table (the head of each field was read).
+
+## Not checked
+- The Cryptiana blog (its search URL returned 404).
+- Title searches in CiNii, J-STAGE and NDL Search (not done).
+- The texts of the books of Nagata Junkō, Sasaki Takashi and Ōno Tetsuya (not read; it cannot be said that they do not mention it).
+- The originals at the National Institute for Defense Studies (the instructions for Tokugō, the table itself).

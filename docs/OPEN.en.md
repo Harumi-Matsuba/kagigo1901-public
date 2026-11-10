@@ -2,12 +2,17 @@
 
 # Open points
 
-## 1. C09122806100 (1901-02-18, Hiroshima) cannot be read
-- Four groups of digits (S1 14 digits, S2 2 digits, S3 8 digits, S4 6 digits). From the decoded text and the surrounding plain text, the portion each covers is determined: S2 = ニ, S3 = ニンチワ, S4 = フクム. Taking 2 digits as 1 kana, the lengths fit.
-- Tried and not fitting: the 1902 table; the 1902 table with a periodic digit (period 1–7) added (including the case where the key is restarted for each group); a rule in which one of the two digits represents the vowel; shifts of the numbering in iroha order or gojūon order.
-- The same ニ appears as 91 and as 69. Because the values of all 15 pairs differ, this does not contradict a table that assigns several values to one character (homophones), but there is also no power to test that.
-- A second telegram using the same method was not found even after viewing every image of the Meiji 34 telegram file.
-- Beside the digits there are faint marks in a different hand. Whether they are dakuten or collation marks by the receiving side cannot be decided from the binarized image.
+## 1. What remains open for the 1901 table ([READING1901.en.md](READING1901.en.md))
+- **Use of 68-99.** In C09122806100, 91 stands twice where the translation has ニ就キ / ニ就テ ("concerning"), and 69 once where 任地 has ニ. The table's ニ is 21. 91 looks like a code for a word and 69 like a spare value for a kana (conjecture), but these three places are the whole sample.
+- **First run of C09122806100.** The form has the 14 digits 〇四五六七一八六五二八九一一. Dropping the leading 〇 and cutting into pairs gives テンシヨク[91], but the leading 〇 and the final 一 are left over. The October 2026 version cut the run into pairs from its first digit (04 56 71 …). The translation says 石橋転任ノ事ニ就キ ("on Ishibashi's transfer"), which is not the same word as テンシヨク (転職).
+- **Thirty table values not attested in any telegram.** ザ ナ バ パ ギ ジ ヒ ビ ピ ミ ズ ヌ ブ プ ユ ル エ ケ セ デ ネ ベ ペ ゴ ソ ゾ ホ ボ ポ ロ are placed by the rule of the arrangement. Whether ヰ ヱ ヲ ヂ ヅ exist in the table is unknown (the rule leaves no room for them).
+- **Five drafts sent out by the General Staff are unread** ([data/outgoing1901.txt](../data/outgoing1901.txt), 148 pairs). Same layout, and all 23 digit runs are of even length, but:
+  - with this table they give no text (21 of the 148 pairs are 68 or more);
+  - tried without result: one number added to everything (mod 68, mod 100), a different number for each telegram, different numbers for the two digits, runs or groups reversed, complements to 9 and 10, ten orderings of the syllabary (gojūon and iroha variants) with reversal, digit swap and 100 shifts;
+  - the same 59 18 occurs twice in one telegram, so the key does not change with position. It looks like another table using the whole range 00-99;
+  - no translation of these five, and no plaintext pair for their table, has been found.
+- **Three digits of C09122724200.** The image is poor and some digits were re-read with the table in hand ([READING1901.en.md](READING1901.en.md)).
+- **Name.** Whether this table is the "Tokugō cipher (numeric part)" (特号暗号 数字ノ分) is not settled. The use (telegrams with officers in China, 1901) fits, but no instruction text has been found.
 
 ## 2. C09122909900 does not reach a full reading
 - The lowest value in the independent second transcription is 84.6% (Claude Sonnet, one run on the enlarged image). In that run, a small エ-shaped marking at the lower right of 「三」 in column 1 was entered as one character of the text, and the head of column 2 and the 八 in column 4 were also read as different characters. The other runs are 88.5–100%.

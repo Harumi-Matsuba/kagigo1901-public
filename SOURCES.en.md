@@ -31,3 +31,18 @@
 - Cryptiana: meijiarmy.htm (Last-Modified 2014-10-19; identical to the copy saved that morning) and meiji.htm (Last-Modified 2016-01-14) contain no description of this table or these reference codes. unsolved.htm (Last-Modified 2026-10-19 23:08 GMT) differs from the morning copy only in French/Spanish items; no Japanese Army item.
 - Cyphersolver: all 55 issues (latest #57, 2026-10-20 07:15 UTC) contain nothing on Meiji-era Japanese Army or JACAR material (the only Japanese item is #48, the three-kana telegrams). The catalogue at origin/main (0258b8a, 2026-10-18) grepped for these reference codes and for 鑰号 / kagigo / yakugo: no match (鑰 occurs only as a character in a Chinese telegraph code table).
 - GitHub: repository search (鑰号, "Japanese army cipher 1902", C09122911500, "陸軍 暗号 1902") and code search (C09122911500): nothing relevant.
+
+## Addition: primary sources for the 1901 table (2026-11-10; JACAR, held by the National Institute for Defense Studies, General Staff miscellany)
+| Reference | Content | Frames used |
+|---|---|---|
+| C09122805800 | From Maj.-Gen. Fukushima: Akiyama firmly declined … (2 Mar 1901), file 明治３４年 電報綴 北清事件 | 0237 (form), translation in the same item |
+| C09122805900 | From Fukushima: Shiba is to leave early next month … (25 Feb 1901), same file | 0241 (form) |
+| C09122806000 | From Fukushima: for a short time it would do … (22 Feb 1901), same file | 0243 (form) |
+| C09122801000 | From Fukushima: the Field Marshal's going to Japan … (22 Apr 1901), same file | 0155 (form) |
+| C09122796200 | From Capt. Idogawa: the Viceroy of Szechwan asks for an interview (8 Mar 1901), same file | 0071 (form) |
+| C09122724200 | Name of the decoration presented by the German Emperor (23-25 Feb 1901), file 特号書類 | 0325 (form), 0323 (translation) |
+| C09122808300, C09122808400, C09122809400, C09122810100, C09122812300 | "Cipher telegram to Maj.-Gen. Fukushima" (Feb-May 1901), file 通報綴 (5 Jan - 29 Jun 1901) | 0306-0307, 0308-0309, 0331-0332, 0348-0350, 0412-0414 (unread drafts) |
+
+- Frame numbers are the position of the form counted from the first frame of the item (the number in the image file name).
+- Secondary: Satoshi Tomokiyo, "A Numerical Cipher of the Imperial Japanese Army (1902-1904)", Cryptiana (https://cryptiana.web.fc2.com/code/meijiarmy2.htm, 2026-10-24): the group-level alignment of C09122806100 with its translation (91 = ニ就テハ etc.). Consulted 2026-11-10.
+- Review just before publication (2026-11-10): the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md).

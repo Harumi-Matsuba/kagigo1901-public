@@ -4,11 +4,19 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 
 日本語: [README.md](README.md).
 
+## Addition: the 1901 table (2026-11-10)
+- **Status: reconstruction of a table.** In seven telegrams of February-April 1901 (from officers in China and one from Hiroshima), the parts where only the sensitive words are put into two digits per kana can be read with the reconstructed table. All seven have their contemporary translations in the same files: **the telegrams were read at the time.** What is new here is the reconstruction of the table; in the range searched on 2026-11-10 (the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md)) no publication of this table was found. No claim of priority is made.
+- **The table**: the syllabary by vowel rows, each voiced and half-voiced kana right after its plain kana, numbered from 00 (ア00 カ01 ガ02 … ワ14, イ15 … リ26, ウ27 … ル39, エ40 … レ52, オ53 … ン67). In full: [docs/READING1901.en.md](docs/READING1901.en.md). It is a different table from the 1902-04 one below.
+- **Numbers**: in the two telegrams the table was applied to after it was fixed (C09122796200 from Chungking, and the two runs of C09122806100 from Hiroshima made only of values inside the table), agreement with the words of the translation is 16/16. Control: none of 1,000 random permutations of the 68 kana did as well (best: 4). Digit agreement with an independent second transcription (Codex): 123/135 (91.1%) over six telegrams; lowest single telegram C09122801000 at 75.0% (the lower of two runs; [docs/METHOD.en.md](docs/METHOD.en.md) §9.3).
+- **C09122806100 (1901-02-18)**: given as unread in the October 2026 version. With the same table it reads ンチワ (任地ハ), フクム (服務) and テンシヨク. 69 and 91 are outside the table ([docs/OPEN.en.md](docs/OPEN.en.md)).
+- **Still unread**: five drafts from the General Staff to Maj.-Gen. Fukushima (same layout, but not readable with this table; transcription in [data/outgoing1901.txt](data/outgoing1901.txt)).
+- **No human has checked the transcriptions.** They are by AI (first: Claude Fable 5.2; second: OpenAI Codex gpt-6-astra, reasoning effort high; prior-work check: Claude Sonnet). Agreement among AIs is no substitute for human checking.
+
 ## Summary (2026-10-20, partly updated 2026-10-25)
 - **Status: the table and two telegrams are full readings; two telegrams are partial readings; one telegram is unread.**
   - Full readings: C09122911500 (1902-03-27, whole text in 36 digit pairs) and C09123116600 (1904-01-25, 13 pairs, no contemporary translation).
   - Partial readings: C09122909900 (1902-03-28) and C03020059400 (1904-01). The readings are given, but the reliability figures fall short of the thresholds used here (see [docs/OPEN.en.md](docs/OPEN.en.md)).
-  - Unread: C09122806100 (1901-02-18), a different method not readable with this table.
+  - C09122806100 (1901-02-18) is not readable with this 1902 table. On 2026-11-10 part of it was read with a different table (see "Addition: the 1901 table" below).
 - **Figures**
   - C09122911500: 35/35 pairs agree with the contemporary translation. With tables whose row and column digits were randomly permuted, 0 of 1,000 reached the real score (max 16). Independent second transcriptions (Codex): 97.2% and 100%. Proportion of pairs with a value: 35/36 (the final "80" is taken as an end mark, not counted).
   - C09123116600: no translation. The reading "ヨヨウノカンコクチズダイヨ" (要用ノ韓国地図貸与, "please lend the required maps of Korea") matches the reply draft in the same file (sending maps of Korea). Using a kana-bigram model built from plaintext telegrams in the JACAR catalogue (18,810 kana), 0 of 1,000 permuted tables scored at or above the real reading. Second transcriptions (Codex ×2): 26/26 and 26/26.
@@ -41,9 +49,12 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 |---|---|
 | `docs/READING.md` | per-telegram transcription, alignment and reading |
 | `docs/METHOD.md` | search, inference of the table, controls, second transcriptions, AI use, limits |
+| `docs/READING1901.md` | the 1901 table and its telegrams |
 | `docs/OPEN.md` | open questions |
 | `docs/PRIOR_CHECK.md` | prior-work check by a separate checker |
 | `data/telegrams.tsv` | list of telegrams |
+| `data/telegrams1901.tsv`, `data/outgoing1901.txt` | list of the 1901 telegrams; transcription of the five unread drafts |
+| `src/table1901.py` | the 1901 table, readings and control |
 | `data/transcription.txt` | digit transcriptions (first reader) |
 | `second/` | second transcriptions (Codex replies, Sonnet digit columns) and prompts |
 | `src/table1902.py` | table, decoding, permutation control |
@@ -52,6 +63,10 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 | `tests/` | `python3 -m unittest discover -s tests` |
 
 No images are included. Sources are cited by JACAR (Japan Center for Asian Historical Records) reference code and frame number; see [SOURCES.en.md](SOURCES.en.md).
+
+## Update history
+- 2026-11-10: the 1901 table added. C09122806100 changed from "unread" to "partly readable with the 1901 table" (ンチワ, フクム, テンシヨク; before, no pair had a value). The pairing of its first run moved by one digit (04 56 71 … → 45 67 18 …).
+- 2026-10-25: the digit list of C09122911500 corrected; one character of C03020059400 changed following Satoshi Tomokiyo's reading of the image.
 
 ## License
 Code (src/, tests/): MIT. Original documents and data: CC BY 4.0 ([LICENSE](LICENSE)).
