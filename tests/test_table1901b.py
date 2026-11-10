@@ -45,14 +45,21 @@ class TestTable1901b(unittest.TestCase):
         self.assertEqual(got[('C09122809400', 5)], 'ゴチウコクハイレガタ')
         self.assertEqual(got[('C09122809400', 8)], 'セイアンヨリモ')
 
+    def test_word_codes(self):
+        self.assertEqual(B.decode_words('64422 11493 2109 6080'), 'リコウシヨウハ[清][公使]')
+        self.assertEqual(B.decode_words('99603 52109'), '[露][清]ゼウハ')
+        self.assertEqual(B.decode_words('92168 98048'), 'モチ[独?][公使]ノ')
+        self.assertEqual(B.decode_words('5918'), '[政府?]ニ')
+        self.assertFalse(set(B.WORDS) & set(B.TABLE))
+
     def test_counts(self):
         c = B.counts()
         self.assertEqual(c['C09122808300'], (11, 11, 10))
         self.assertEqual(c['C09122808400'], (15, 15, 15))
-        self.assertEqual(c['C09122809400'], (59, 52, 48))
-        self.assertEqual(c['C09122810100'], (42, 40, 37))
-        self.assertEqual(c['C09122812300'], (21, 20, 20))
-        self.assertEqual(tuple(sum(x) for x in zip(*c.values())), (148, 138, 130))
+        self.assertEqual(c['C09122809400'], (59, 52, 53))
+        self.assertEqual(c['C09122810100'], (42, 40, 38))
+        self.assertEqual(c['C09122812300'], (21, 20, 21))
+        self.assertEqual(tuple(sum(x) for x in zip(*c.values())), (148, 138, 137))
 
 
 if __name__ == '__main__':

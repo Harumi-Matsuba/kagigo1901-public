@@ -121,7 +121,12 @@ Alignment and reading: [READING1901B.en.md](READING1901B.en.md); script: `src/ta
 ### 10.5 Limits
 - No human has checked the transcriptions.
 - There is no contemporary plaintext, so no calibration. The reading rests on the control and on the fact that the words that came out of the table fit the context.
-- Two drafts are full readings (C09122808400, C09122812300). Three are partial, and the five values outside the table are not read ([OPEN.en.md](OPEN.en.md) §1b).
+- Two drafts are full readings (C09122808400, C09122812300). Three are partial ([OPEN.en.md](OPEN.en.md) §1b).
+
+### 10.5b Word codes and a check of the re-readings (added 2026-11-10)
+- For the five values outside the table, words were proposed from the context and then compared with records. The passage "Li Hongzhang had [60][80] tell …" in the telegram of 2 March was compared with the Foreign Ministry minutes of the Chinese Minister's call of 1 March (JACAR B03030000800), giving 60 = China and 80 = minister. 99 = Russia comes from the contexts "[99][60] articles" and "… secret agreement". 89 = Germany and 59 = government are conjecture and are not counted as read.
+- To look for more telegrams in the same table, 84 catalogue entries of the same binder (C09122807700–C09122816000) were fetched. The only cipher telegrams to Fukushima are the five.
+- Seven re-read places (the first group and two digits in C09122809400; romaji in C09122810100 and C09122812300) were cut out as strips and given, without the table and without our readings, to Codex ([second/PROMPT1901B2.md](../second/PROMPT1901B2.md); output in second/codex1901b/strip_*.txt) and to Claude Sonnet. The rule fixed beforehand: a re-reading is supported if both agree with it, and stays open if they split. Result: in no place did both agree with the re-reading. Both read the first group as 99506, and our re-reading (99606) was withdrawn. The other places split or were not supported (see the notes under each telegram in [READING1901B.en.md](READING1901B.en.md)).
 
 ### 10.6 Use of AI (outgoing table)
 - Claude Fable 5.2 (Anthropic): first transcription from the images, finding the table, controls, writing the documents.

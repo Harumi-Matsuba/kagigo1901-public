@@ -5,7 +5,8 @@
                  一の位 1ア 2カ 3ガ 4サ 5ザ 6タ 7ダ 8ナ 9ハ 0バ（バ行は 10・20・30・40・50）
     後半 51〜95：十の位 5ア段 6イ段 7ウ段 8エ段 9オ段、
                  一の位 1パ 2マ 3ヤ 4ラ、55＝ワ、65＝ン
-    後半の一の位 6〜0 と 75・85・95 は、カナの値としては決まっていない（59・60・80・89・99 が電報に出る）。
+    後半の一の位 6〜0 と 75・85・95 は、カナの値としては決まっていない。
+    電報に出る 59・60・80・89・99 は語の符号（WORDS）。
 着電の表（src/table1901.py）とは別の表。体裁は同じで、機密の語だけを2桁に換え、5桁ずつに区切る。
 使い方: python3 src/table1901b.py [JMdict_e のパス]
         （5通の読みと数を出す。辞書のパスを付けると、数字を入れ替えた表との対照も出す）
@@ -34,6 +35,11 @@ def table(d1=(0, 1, 2, 3, 4), u1=tuple(range(1, 11)), d2=(0, 1, 2, 3, 4), u2=(1,
 
 TABLE = table()
 
+# 表にない値＝語の符号。(語, 史料の裏づけがあるか)。
+# 99・60・80 は、1901年3月1日の清国公使来談の筆記（JACAR B03030000800）と 3月2日の電報の突き合わせによる。
+# 89・59 は文脈からの推定（59 は 外務省・外務大臣 でも文が通る）。
+WORDS = {99: ('露', True), 60: ('清', True), 80: ('公使', True), 89: ('独', False), 59: ('政府', False)}
+
 # (参照コード, 日付, [(数字の連なり＝1回目の書き起こし, 読み直した連なり または None), ...])
 # 1回目の書き起こしは、表が分かる前に画像から読んだもの。
 # 読み直しは、表が分かってから画像を見直して変えた桁（4か所）。そのうち C09122810100 の2か所は、
@@ -56,7 +62,7 @@ TELEGRAMS = [
 # 読みに数えない組（電報, 連なりの番号, 組の番号）：表にある値だが、語として確かでないもの。
 DOUBTFUL = {
     ('C09122808300', 0, 4),   # 32＝ケ（ケコウ）
-    ('C09122809400', 0, 1),   # 50＝ボ（最初の群は桁が決まらない）
+    ('C09122809400', 0, 1),   # 50＝ボ（99506。60＝清 の書き誤りとみる・推定）
     ('C09122809400', 0, 4),   # 52＝マ（ミツマク。ヤ＝53 なら密約）
     ('C09122809400', 5, 1),   # 96→16＝チ（読み直し。2回目の読み手は 96）
     ('C09122809400', 8, 4),   # 98→93＝ヨ（読み直し。2回目の読み手は 98）
@@ -76,6 +82,19 @@ def decode(run, t=None):
     return ''.join(t.get(p, '[%02d]' % p) for p in pairs(run))
 
 
+def decode_words(run):
+    """語の符号を語に置き換えた読み。推定の語には ? を付ける。"""
+    out = []
+    for p in pairs(run):
+        if p in TABLE:
+            out.append(TABLE[p])
+        elif p in WORDS:
+            out.append('[%s%s]' % (WORDS[p][0], '' if WORDS[p][1] else '?'))
+        else:
+            out.append('[%02d]' % p)
+    return ''.join(out)
+
+
 def readings(reread=True):
     """(参照コード, 連なりの番号, 使った連なり, 読み) の一覧。"""
     out = []
@@ -87,7 +106,7 @@ def readings(reread=True):
 
 
 def counts():
-    """電報ごとの (組の数, 表にある値の組, 読みに数える組)。"""
+    """電報ごとの (組の数, 表にある値の組, 読みに数える組)。読みに数える組には、裏づけのある語の符号を含む。"""
     res = {}
     for ref, _, runs in TELEGRAMS:
         n = intab = sense = 0
@@ -98,6 +117,8 @@ def counts():
                     intab += 1
                     if (ref, i, j) not in DOUBTFUL:
                         sense += 1
+                elif WORDS.get(p, ('', False))[1]:
+                    sense += 1
         res[ref] = (n, intab, sense)
     return res
 
@@ -157,7 +178,7 @@ def control(words, reread=False, n=1000, seed=1901):
 
 if __name__ == '__main__':
     for ref, i, run, text in readings():
-        print(ref, i, run, text)
+        print(ref, i, run, text, decode_words(run) if '[' in text else '')
     tot = [0, 0, 0]
     for ref, c in counts().items():
         print(ref, '組 %d 表にある値 %d 読みに数える %d' % c)
