@@ -6,13 +6,20 @@
 - **Use of 68-99.** In C09122806100, 91 stands twice where the translation has ニ就キ / ニ就テ ("concerning"), and 69 once where 任地 has ニ. The table's ニ is 21. 91 looks like a code for a word and 69 like a spare value for a kana (conjecture), but these three places are the whole sample.
 - **First run of C09122806100.** The form has the 14 digits 〇四五六七一八六五二八九一一. Dropping the leading 〇 and cutting into pairs gives テンシヨク[91], but the leading 〇 and the final 一 are left over. The October 2026 version cut the run into pairs from its first digit (04 56 71 …). The translation says 石橋転任ノ事ニ就キ ("on Ishibashi's transfer"), which is not the same word as テンシヨク (転職).
 - **Thirty table values not attested in any telegram.** ザ ナ バ パ ギ ジ ヒ ビ ピ ミ ズ ヌ ブ プ ユ ル エ ケ セ デ ネ ベ ペ ゴ ソ ゾ ホ ボ ポ ロ are placed by the rule of the arrangement. Whether ヰ ヱ ヲ ヂ ヅ exist in the table is unknown (the rule leaves no room for them).
-- **Five drafts sent out by the General Staff are unread** ([data/outgoing1901.txt](../data/outgoing1901.txt), 148 pairs). Same layout, and all 23 digit runs are of even length, but:
-  - with this table they give no text (21 of the 148 pairs are 68 or more);
-  - tried without result: one number added to everything (mod 68, mod 100), a different number for each telegram, different numbers for the two digits, runs or groups reversed, complements to 9 and 10, ten orderings of the syllabary (gojūon and iroha variants) with reversal, digit swap and 100 shifts;
-  - the same 59 18 occurs twice in one telegram, so the key does not change with position. It looks like another table using the whole range 00-99;
-  - no translation of these five, and no plaintext pair for their table, has been found.
+- **The five drafts sent out by the General Staff** were read with a different table on 2026-11-10 ([READING1901B.en.md](READING1901B.en.md)). What remains open is in §1b below.
 - **Three digits of C09122724200.** The image is poor and some digits were re-read with the table in hand ([READING1901.en.md](READING1901.en.md)).
 - **Name.** Whether this table is the "Tokugō cipher (numeric part)" (特号暗号 数字ノ分) is not settled. The use (telegrams with officers in China, 1901) fits, but no instruction text has been found.
+
+## 1b. Open points in the five drafts sent out by the General Staff ([READING1901B.en.md](READING1901B.en.md))
+- **Five values not in the table (59, 60, 80, 89, 99; ten occurrences).** All have units digit 9 or 0 in the upper half. Where they occur: `[99]〔ボ〕ミツ〔マ〕クノ 不利益ナル`, `李鴻章ハ[60][80]ヲシテ[59]ニ告ゲサスルニ`, `[99][60]ゼウハ`, `我ガ[59]ニ張之洞ヨリ`, `〔モチ〕[89][80]ノ都合如何ニ彼ヲ引キ受クルカ`, `交代兵ノ数ハ[80]ガ決マラザレバ`. They look like codes for words such as countries or offices (conjecture). 99 = Russia, 60 = China, 89 = Germany, 80 = minister or government, 59 = government or Foreign Ministry would fit the contexts, but nothing confirms them.
+- **First group of C09122809400.** First transcription 99506, second reader 77306. Under magnification the third digit is 3 or 5.
+- **Kana that do not fit a word.** ミツ〔マ〕ク (52; ヤ = 53 would give 密約), 〔ミ〕ンユウ (62; マ = 52 would give 漫遊), 〔ケ〕コウ (32), 〔モチ〕 (92 16). The images look like these digits. Whether the drafter slipped or we misread cannot be decided.
+- **Two digits re-read after the table was known** (C09122809400: 43962→43162, 16598→16593) were read by the second reader as in the first transcription, so they stay conjecture.
+- **C09122809400 agrees with the second reader in 53/59 pairs (89.8%)** when counted by two-digit pairs. For C09122808300, C09122809400 and C09122810100 the share of pairs counted as read is 90.9%, 81.4% and 88.1%: partial readings.
+- **22 table values that do not occur in the telegrams** are filled in from the grid rule. The use of units digits 6–8 in the upper half and of 75, 85, 95 is unknown, as is the place of ヰ, ヱ, ヲ (ヲ is sent as オ).
+- **Persons.** Which officers Kamio, Ōshima, Kusunose and Shiba are has not been checked.
+- **Contemporary plaintext.** No Japanese draft or translation of these five has been found. In the same file, C09122807700–C09122809900 (22 items, 53 frames) were viewed: the only drafts with digits are C09122808300 and C09122808400, the others are drafts in Japanese. After C09122810000 only C09122810100 and C09122812300 have been viewed.
+- **Relation to the table of the incoming telegrams.** In the same months the incoming telegrams use the serial table (00–67) and the outgoing ones the grid. Whether the tables were split by direction or by station is not known.
 
 ## 2. C09122909900 does not reach a full reading
 - The lowest value in the independent second transcription is 84.6% (Claude Sonnet, one run on the enlarged image). In that run, a small エ-shaped marking at the lower right of 「三」 in column 1 was entered as one character of the text, and the head of column 2 and the 八 in column 4 were also read as different characters. The other runs are 88.5–100%.

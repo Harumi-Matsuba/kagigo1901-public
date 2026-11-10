@@ -81,10 +81,50 @@ Correspondence and readings: [READING1901.en.md](READING1901.en.md); script: `sr
 - No human has checked the transcriptions.
 - The sample is seven telegrams, 72 pairs (leaving out the values outside the table in C09122806100). 38 of the 68 values are attested.
 - These telegrams were read at the time; what is new here is only the reconstruction of the table. The name of the table (whether it is the numeric part of the Tokugō cipher) is not confirmed.
-- The five outgoing drafts are not read ([OPEN.en.md](OPEN.en.md)).
+- The five outgoing drafts are not read by this table. They are read by a different table (§10).
 
 ### 9.5 Use of AI (1901 table)
 - Claude Fable 5.2 (Anthropic): transcription of the images (first), inference of the table, control, writing of the documents.
 - OpenAI Codex (gpt-6-astra, reasoning effort high): independent second transcription.
 - Claude Sonnet: prior-work check (a separate reader that took no part in rebuilding the table).
 - Publisher: gave instructions on the direction of the work. Did not check the transcriptions or the readings.
+
+## 10. The 1901 table of the outgoing drafts (added 2026-11-10)
+Alignment and reading: [READING1901B.en.md](READING1901B.en.md); script: `src/table1901b.py`.
+
+### 10.1 How it was found
+- The table of the incoming telegrams (§9) does not read these drafts, and exhaustive additions, reversals and reorderings gave no text. There is no contemporary translation.
+- The lead was the romaji right after the digits. At the end of C09122812300, `48456 241 mitasigatasi` ("… is hard to meet"): taking the four pairs as ノゾミヲ ("the wish", object), the differences ノ−ゾ = 3 and ゾ−オ = 4 are the same as in the o-row of the incoming table (オ コ ゴ ソ ゾ ト ド ノ). Hence オ41 コ42 ゴ43 ソ44 ゾ45 ト46 ド47 ノ48.
+- In C09122808400, `41411 45248 kotowa…` is then オオ・・ノ ("the matter of …"), i.e. オオシマノ; in C09122809400, `64422 11493` is ・コ・・・・ with the third and sixth pair equal, i.e. リコウシヨウ (Li Hongzhang). This fixes シ14, ウ21, マ52, ミ62, リ64, ヨ93 and shows a grid with tens digit = vowel row and units digit = consonant column (lower half ア k g s z t d n h b, upper half p m y r w).
+- Only these three words (13 different values) and the grid rule were used to fix the table. The other readings (ヒメジニ, クスノセハ, シバハトニ, ワガ, テウシドウ, ゼウヤクノ, デンポウキ, ゲンスイハコウシウワンヨリニホンニ, カレオヒキ, ワレハソウ, ヨウスナレハ, キテウスル, コウタイヘイノスウハ and so on) came out of the table.
+
+### 10.2 Control
+- There is no translation, so a public dictionary is used for scoring: the readings of JMdict (English edition, fetched 2026-11-10), normalised to full-size katakana, 175,531 words of three kana or more; the score is the number of kana in each digit run that can be covered by non-overlapping dictionary words (`cover` in `src/table1901b.py`). The dictionary is not included here.
+- With the first transcription as it stands (digits read before the table was known): 58 for the real table. Of 1,000 grids with the row and column digits randomly permuted, none reached that (max 37); of 1,000 tables with the 70 kana randomly reassigned, none (max 36).
+- With the four re-read places: 67 for the real table, again none of 1,000 (max 38 and 42).
+- The dictionary has modern spellings, so the historical spellings (ゼウヤク, テウ, キテウ, チウコク) and personal names score nothing; the scoring is to that extent unfavourable to the real table.
+
+### 10.3 Independent second transcription
+- OpenAI Codex (codex-cli 0.163.0-alpha.10.2, model gpt-6-astra, reasoning effort high) was given the image of the message field of each of the five drafts, one at a time, from an empty folder. The table and the first transcription were not given. The run logs show no command execution or file reading. Prompt: `second/PROMPT1901B.md`; replies: `second/codex1901b/`.
+- Digit agreement (first transcription as reference; digits only, aligned, counting matching digits): C09122808300 22/22, C09122808400 30/30, C09122809400 109/118 (92.4%), C09122810100 82/84 (97.6%), C09122812300 42/42, total 285/296 (96.3%).
+- Differences in C09122809400: the first group (first 99506, Codex 77306), the head of 64422 (Codex took it as struck out: 422), 14222 (Codex 14223), 35215 (Codex took the fourth digit as struck out), the final 12112 (Codex 121 and a blot). Counted by two-digit pairs: 53/59 (89.8%).
+- Differences in C09122810100: 42291 (Codex 42211), 94427 (Codex 94421), and the leading 4 of a struck-out group (kept by Codex). The first two are the digits we re-read after the table was known; a reader who did not know the table read the same.
+- Of the four places re-read after the table was known, the two in C09122809400 (43962→43162, 16598→16593) were read by Codex as in the first transcription. These two are treated as conjecture and are not counted as read.
+- The differences were not put to a further model. Only the four places above were changed; data/outgoing1901.txt (the first transcription) is left as it was, and the re-readings are kept apart in `src/table1901b.py`.
+
+### 10.4 Checks against content
+- C09122810100 (8 March), "the Field Marshal wishes to come to Japan from Kiaochow Bay": Fukushima's telegram of 22 April (C09122801000) has "the Field Marshal has received the Emperor's permission to go to Japan". The Spectator of 8 June 1901 reports that Count Waldersee had left China for Japan.
+- A draft in Japanese in the same file, C09122808100 (to Maj.-Gen. Fukushima, from Tamura), asks him to convey to the Field Marshal an invitation to visit Japan on the way home (seen in a reduced image and in the JACAR catalogue text; it is not the plaintext of any of the five).
+- C09122808400 (14 February), "Shiba will be sent back in any case": Fukushima's telegram of 25 February (C09122805900) has "Shiba is to leave at the beginning of next month".
+- C09122809400 (2 March) falls in the period of Japan's advice to China on the Russo-Chinese agreement about Manchuria. The details have not been compared with the sources.
+
+### 10.5 Limits
+- No human has checked the transcriptions.
+- There is no contemporary plaintext, so no calibration. The reading rests on the control and on the fact that the words that came out of the table fit the context.
+- Two drafts are full readings (C09122808400, C09122812300). Three are partial, and the five values outside the table are not read ([OPEN.en.md](OPEN.en.md) §1b).
+
+### 10.6 Use of AI (outgoing table)
+- Claude Fable 5.2 (Anthropic): first transcription from the images, finding the table, controls, writing the documents.
+- OpenAI Codex (gpt-6-astra, reasoning effort high): independent second transcription.
+- Claude Sonnet: prior-work check (a separate reader who took no part in finding the table).
+- The publisher: direction of the work. The publisher has not checked the transcriptions or the readings.

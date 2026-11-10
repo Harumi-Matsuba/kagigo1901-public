@@ -1,7 +1,8 @@
-# Outgoing drafts of the General Staff (Maj.-Gen. Tamura) to Maj.-Gen. Fukushima, 1901: NOT READ.
-# Same layout (digits in fives inside a romanised Japanese text, every digit run of even length),
-# but the table of src/table1901.py does not read them. Transcribed from the JACAR images by an AI; "?" = unsure letter.
-# Digits are given as written (groups of five; the last group of a run is shorter).
+# Outgoing drafts of the General Staff (Maj.-Gen. Tamura) to Maj.-Gen. Fukushima, 1901.
+# First transcription from the JACAR images by an AI, made BEFORE the table was known; "?" = unsure letter.
+# Digits are given as written (groups of five; the last group of a run is shorter). Every digit run has even length.
+# Reading with the table of src/table1901b.py: data/outgoing1901.tsv and docs/READING1901B.md.
+# Digits re-read after the table was known (not changed in this file): see src/table1901b.py and docs/READING1901B.md.
 
 C09122808300 (undated, Feb 1901)
 02624 14832 4221 yurusazu 1982 1518 yarutumori

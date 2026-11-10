@@ -4,12 +4,25 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 
 日本語: [README.md](README.md).
 
+## Addition: the 1901 table of the outgoing drafts (2026-11-10)
+- **Status: a table found; two drafts are full readings, three are partial readings.** Five drafts from the General Staff (Maj.-Gen. Tamura) to Maj.-Gen. Fukushima in Peking, February–May 1901 (catalogue 715 of the Cyphersolver ledger). No contemporary translation has been found. Within the range searched on 2026-11-10 (the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md)), no earlier reading and no printed plaintext was found. This is not a claim to be the first.
+- **The table**: two digits per kana, a grid with tens digit = vowel row and units digit = consonant column. Lower half 01–50: tens 0–4 = a i u e o; units 1 ア, 2 k, 3 g, 4 s, 5 z, 6 t, 7 d, 8 n, 9 h, 0 b. Upper half 51–95: tens 5–9 = a i u e o; units 1 p, 2 m, 3 y, 4 r; 55 = ワ, 65 = ン. It is not the table of the incoming telegrams (below). In full, with the reading: [docs/READING1901B.en.md](docs/READING1901B.en.md).
+- **Reading** ([ ] = value not in the table, 〔 〕 = doubtful kana):
+  - C09122808400 (14 Feb): 大島ノ事ハ今相談中、若シ行ケネバ楠瀬ハ如何、柴ハ兎ニ角返ス — "The matter of Ōshima is under discussion now. If he cannot go, how about Kusunose? Shiba will be sent back in any case." (full reading)
+  - C09122812300 (1 May): 帰朝スル様ニ…ナレリ、又交代兵ノ数ハ[80]ガ決マラザレバ望ミヲ充タシ難シ — "… is to return home. Also, the number of relief troops: unless [80] is settled, the wish is hard to meet." (full reading)
+  - C09122808300 (Feb): 神尾ノ〔ケコウ〕許サズ、姫路ニ遣ル積リ — "Kamio's 〔…〕 is not permitted; we intend to send him to Himeji."
+  - C09122809400 (2 Mar): … to our advice that the … secret agreement is disadvantageous, Li Hongzhang had [60][80] tell [59] that … the advice is hard to accept …; Zhang Zhidong has asked our [59] that this treaty should not come into being; a telegram of the same meaning has come from Xi'an.
+  - C09122810100 (8 Mar): the Field Marshal wishes to come to Japan from Kiaochow Bay …; we are sounding out how …[89][80] would be placed to receive him; if it looks as though we shall receive him suitably, recommend the 〔pleasure〕 trip.
+- **Numbers**: of 148 pairs, 138 have a value in the table and 130 are counted as read (87.8%; by telegram 90.9%, 100%, 81.4%, 88.1%, 95.2%). Control: none of 1,000 tables with permuted digits did as well as the real one (kana covered by dictionary words: real 58, max 37). Digit agreement with the independent second transcription (Codex): 285/296 (96.3%); lowest per telegram 92.4% for C09122809400 (89.8% when counted by two-digit pairs). No calibration ([docs/METHOD.en.md](docs/METHOD.en.md) §10).
+- **Not read**: five values outside the table (59, 60, 80, 89, 99; probably codes for words), the first group of C09122809400, and a few kana that do not fit a word ([docs/OPEN.en.md](docs/OPEN.en.md) §1b).
+- **No human has checked the transcriptions.** They are by AI (first: Claude Fable 5.2; second: OpenAI Codex gpt-6-astra, reasoning effort high; prior-work check: Claude Sonnet). Agreement among AIs is no substitute for human checking.
+
 ## Addition: the 1901 table (2026-11-10)
 - **Status: reconstruction of a table.** In seven telegrams of February-April 1901 (from officers in China and one from Hiroshima), the parts where only the sensitive words are put into two digits per kana can be read with the reconstructed table. All seven have their contemporary translations in the same files: **the telegrams were read at the time.** What is new here is the reconstruction of the table; in the range searched on 2026-11-10 (the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md)) no publication of this table was found. No claim of priority is made.
 - **The table**: the syllabary by vowel rows, each voiced and half-voiced kana right after its plain kana, numbered from 00 (ア00 カ01 ガ02 … ワ14, イ15 … リ26, ウ27 … ル39, エ40 … レ52, オ53 … ン67). In full: [docs/READING1901.en.md](docs/READING1901.en.md). It is a different table from the 1902-04 one below.
 - **Numbers**: in the two telegrams the table was applied to after it was fixed (C09122796200 from Chungking, and the two runs of C09122806100 from Hiroshima made only of values inside the table), agreement with the words of the translation is 16/16. Control: none of 1,000 random permutations of the 68 kana did as well (best: 4). Digit agreement with an independent second transcription (Codex): 123/135 (91.1%) over six telegrams; lowest single telegram C09122801000 at 75.0% (the lower of two runs; [docs/METHOD.en.md](docs/METHOD.en.md) §9.3).
 - **C09122806100 (1901-02-18)**: given as unread in the October 2026 version. With the same table it reads ンチワ (任地ハ), フクム (服務) and テンシヨク. 69 and 91 are outside the table ([docs/OPEN.en.md](docs/OPEN.en.md)).
-- **Still unread**: five drafts from the General Staff to Maj.-Gen. Fukushima (same layout, but not readable with this table; transcription in [data/outgoing1901.txt](data/outgoing1901.txt)).
+- The five drafts from the General Staff to Maj.-Gen. Fukushima have the same layout but are not readable with this table. They are read with a different table (see "Addition: the 1901 table of the outgoing drafts" above).
 - **No human has checked the transcriptions.** They are by AI (first: Claude Fable 5.2; second: OpenAI Codex gpt-6-astra, reasoning effort high; prior-work check: Claude Sonnet). Agreement among AIs is no substitute for human checking.
 
 ## Summary (2026-10-20, partly updated 2026-10-25)
@@ -53,7 +66,9 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 | `docs/OPEN.md` | open questions |
 | `docs/PRIOR_CHECK.md` | prior-work check by a separate checker |
 | `data/telegrams.tsv` | list of telegrams |
-| `data/telegrams1901.tsv`, `data/outgoing1901.txt` | list of the 1901 telegrams; transcription of the five unread drafts |
+| `docs/READING1901B.md` | the 1901 table of the outgoing drafts and the reading of the five drafts |
+| `data/telegrams1901.tsv`, `data/outgoing1901.txt`, `data/outgoing1901.tsv` | list of the 1901 telegrams; first transcription of the five drafts; reading run by run |
+| `src/table1901b.py` | the 1901 outgoing table, readings and control |
 | `src/table1901.py` | the 1901 table, readings and control |
 | `data/transcription.txt` | digit transcriptions (first reader) |
 | `second/` | second transcriptions (Codex replies, Sonnet digit columns) and prompts |
@@ -65,6 +80,7 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 No images are included. Sources are cited by JACAR (Japan Center for Asian Historical Records) reference code and frame number; see [SOURCES.en.md](SOURCES.en.md).
 
 ## Update history
+- 2026-11-10 (second update): the five drafts sent out by the General Staff changed from "unread" to "two full readings, three partial readings" (outgoing table added; before, no pair had a value, now 138 of 148 pairs).
 - 2026-11-10: the 1901 table added. C09122806100 changed from "unread" to "partly readable with the 1901 table" (ンチワ, フクム, テンシヨク; before, no pair had a value). The pairing of its first run moved by one digit (04 56 71 … → 45 67 18 …).
 - 2026-10-25: the digit list of C09122911500 corrected; one character of C03020059400 changed following Satoshi Tomokiyo's reading of the image.
 

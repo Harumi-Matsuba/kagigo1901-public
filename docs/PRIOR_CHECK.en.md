@@ -70,3 +70,27 @@ Date of check: 2026-11-10. Checker: a separate reader (Claude Sonnet) who took n
 - Title searches in CiNii, J-STAGE and NDL Search (not done).
 - The texts of the books of Nagata Junkō, Sasaki Takashi and Ōno Tetsuya (not read; it cannot be said that they do not mention it).
 - The originals at the National Institute for Defense Studies (the instructions for Tokugō, the table itself).
+
+---
+
+# Addition: the five outgoing drafts of 1901 (2026-11-10)
+
+Date: 2026-11-10. Checker: a separate reader who took no part in finding the table (Claude Sonnet). Given the five reference codes, part of the digits, the table and the reading, the checker looked, with the aim of refuting, for an earlier reading or a printed plaintext. The ledger and Cryptiana's meijiarmy2.htm were also looked up again on the side that found the table.
+
+## Category: not found
+- Within the range below, neither a plaintext of the five drafts nor a reading by anyone else was found. This is not a claim to be the first.
+
+## Where we looked
+- **Cyphersolver ledger** (origin/main 8ccc45534, 2026-11-10 10:01 UTC): searched the whole tree for the five reference codes, Tamura, Fukushima, 41411, 02624, "99603 52109", Himeji, Waldersee, 通報綴, 福島安正, 田村怡与造. The hits are the entry for catalogue 715 and its survey notes (catalogue.json, docs/solve/715.html, working files under research/jacar/), all "no decipherment". Himeji, Waldersee, 福島安正, 田村怡与造: no hits. In issues and pull requests (the 100 most recently updated, and searches), the only items on catalogue 715 or the 1901 army telegrams are the reports from this repository; no reading by anyone else.
+- **Cryptiana (Tomokiyo Satoshi)**: unsolved.htm has no item on Tamura, Fukushima or 1901 army telegrams. meijiarmy.htm (2014-10-19) does not mention the five. The only 1901 telegram in meijiarmy2.htm (2026-10-24) is C09122806100. Nothing in the 20 latest blog posts.
+- **satoru.net/crypt/**: nothing.
+- **GitHub**: repository search finds only this repository. In code search the reference codes occur only in the ledger's survey notes. Digit groups ("41411 45248" etc.) hit large numbers of unrelated tables and could not be used.
+- **Web search** (six searches in Japanese and English: Tamura Iyozō to Fukushima Yasumasa 1901, the Russo-Chinese secret agreement with Li Hongzhang and Zhang Zhidong, Waldersee's visit to Japan, 通報綴, etc.): no edition, article or source collection giving the text of the five.
+- **JACAR catalogue** (C09122809400, C09122808400 and others): the content field is the cipher text as transcribed; no record giving a translation or draft under another reference code was seen. The Japanese draft C09122808100 in the same file (on the Field Marshal's visit) is not the plaintext of any of the five. The catalogue gives "Lt.-Gen. Yamaguchi" as creator of C09122809400 (the draft has a marginal note "send the full text of this telegram to Divisional Commander Yamaguchi as well"; the signature reads Tamura).
+
+## Not checked
+- NDL Search, CiNii, J-STAGE (not searched).
+- The text of 『日本外交文書』 vol. 34 and of source collections on Fukushima Yasumasa (not read; it cannot be said that they do not contain it).
+- Individual records of Cryptoole (only the search page was seen).
+- The second half of the item list of the file (only the first 20 items of the catalogue list; in images, C09122807700–C09122809900, C09122810100 and C09122812300 were viewed).
+- The Cryptiana pages and the web searches were read through a summarising fetch, so something may have been missed.

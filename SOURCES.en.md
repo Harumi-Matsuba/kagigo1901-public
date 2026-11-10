@@ -41,8 +41,10 @@
 | C09122801000 | From Fukushima: the Field Marshal's going to Japan … (22 Apr 1901), same file | 0155 (form) |
 | C09122796200 | From Capt. Idogawa: the Viceroy of Szechwan asks for an interview (8 Mar 1901), same file | 0071 (form) |
 | C09122724200 | Name of the decoration presented by the German Emperor (23-25 Feb 1901), file 特号書類 | 0325 (form), 0323 (translation) |
-| C09122808300, C09122808400, C09122809400, C09122810100, C09122812300 | "Cipher telegram to Maj.-Gen. Fukushima" (Feb-May 1901), file 通報綴 (5 Jan - 29 Jun 1901) | 0306-0307, 0308-0309, 0331-0332, 0348-0350, 0412-0414 (unread drafts) |
+| C09122808300, C09122808400, C09122809400, C09122810100, C09122812300 | "Cipher telegram to Maj.-Gen. Fukushima" (Feb-May 1901), file 通報綴 (5 Jan - 29 Jun 1901) | 0306-0307, 0308-0309, 0331-0332, 0348-0350, 0412-0414 (drafts sent out by the General Staff; read with a different table on 2026-11-10, [docs/READING1901B.en.md](docs/READING1901B.en.md)) |
 
 - Frame numbers are the position of the form counted from the first frame of the item (the number in the image file name).
 - Secondary: Satoshi Tomokiyo, "A Numerical Cipher of the Imperial Japanese Army (1902-1904)", Cryptiana (https://cryptiana.web.fc2.com/code/meijiarmy2.htm, 2026-10-24): the group-level alignment of C09122806100 with its translation (91 = ニ就テハ etc.). Consulted 2026-11-10.
 - Review just before publication (2026-11-10): the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md).
+- Further material used for the five outgoing drafts (2026-11-10): C09122808100 (a draft in Japanese in the same file, on the Field Marshal's visit). The Spectator, 8 June 1901, p. 1 (https://archive.spectator.co.uk/article/8th-june-1901/1/the-only-news-from-china-this-week-is-that-there: Count Waldersee has left China for Japan). For scoring the control: JMdict (Electronic Dictionary Research and Development Group, http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz, fetched 2026-11-10; not included here).
+- Prior-work check for the five outgoing drafts (2026-11-10): "Addition: the five outgoing drafts of 1901" in [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md).
