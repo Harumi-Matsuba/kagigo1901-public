@@ -1,0 +1,47 @@
+# C09122813500 sheet 2: OpenAI Codex (codex-cli 0.163.0-alpha.10.2, gpt-6-astra, reasoning high), one call per vertical strip
+# (upper and lower halves of the strip; b1 = rightmost strip). Given only the strip images and second/PROMPT_C09122813500.md;
+# no plaintext, table or first reading. U/L = upper/lower half.
+[strip b1]
+L 001632{3/5}178
+[strip b2]
+U 18672{9/6}36?86724671852{5/4}0167
+U 435381
+L 8111627306528
+L 2065{7/9}
+[strip b3]
+U 06201007
+U 686627
+U 30
+U 31
+L 31
+L 165864304
+L 030
+L 15083
+L 5727
+[strip b4]
+U 35284267
+U 15150640{2/1}55727
+U {1/2}865270605{7/6}
+L 05{7/6}627
+L 1812381540252{6/8}20
+L 2967
+[strip b5]
+U 15
+U 362065
+U 1865270616056
+U 026
+L 6628362065
+L 2{3/2}24166
+L {3/2}{3/5}52
+[strip b6]
+U 667
+U 18
+U 50237
+U 121149
+L 905423042
+L 5003
+L 6018{6/5}{4/5}3768
+[strip b7]
+U 536{4/9}
+U 0613
+U 1927056627

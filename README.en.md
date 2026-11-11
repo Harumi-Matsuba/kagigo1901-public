@@ -4,6 +4,12 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 
 日本語: [README.md](README.md).
 
+## Addition: three drafts of May-June 1901 (2026-11-11)
+- The three drafts that follow the five drafts to Fukushima in the same binder were viewed in the images ([docs/READING1901C.en.md](docs/READING1901C.en.md)). They carry a plaintext draft or kana glosses, so the plaintext of the enciphered parts is known; the question was which table they use.
+- **C09122813500 (31 May, to Lt.-Gen. Yamaguchi) uses the table of the incoming telegrams.** The 20 words read (97 pairs) follow that table except in two places. **The value 68, outside the table, is the numeral 一** (the 一 of 立花小一郎; the catalogue transcription, the first reader and Codex agree). The second half cannot be read in the image.
+- **C09122814000 (3 June, to Maj. Tachibana) and C09122815900 (telegram on the merit survey) use a third table**: tens digit = vowel row as in the grid of the Fukushima drafts, but with the consonant columns numbered in reverse (9 a, 8 ka, 7 sa, 6 ta, 5 na, 4 ha, 3 ma, 2 ya, 1 ra, 0 wa; upper half 9 ga, 8 za, 7 da, 6 ba, 5 pa). Worked out from 20 glossed values ([src/table1901c.py](src/table1901c.py)); three words read after the rule was set up (ゴロ, コウタイ, セシムル) also fit.
+- **No human has checked the transcriptions.** First reader Claude Opus 5.5, second reader OpenAI Codex gpt-6-astra (reasoning high).
+
 ## Addition: the 1901 table of the outgoing drafts (2026-11-10)
 - **Status: a table found; two drafts are full readings, three are partial readings.** Five drafts from the General Staff (Maj.-Gen. Tamura) to Maj.-Gen. Fukushima in Peking, February–May 1901 (catalogue 715 of the Cyphersolver ledger). No contemporary translation has been found. Within the range searched on 2026-11-10 (the added section of [docs/PRIOR_CHECK.en.md](docs/PRIOR_CHECK.en.md)), no earlier reading and no printed plaintext was found. This is not a claim to be the first.
 - **The table**: two digits per kana, a grid with tens digit = vowel row and units digit = consonant column. Lower half 01–50: tens 0–4 = a i u e o; units 1 ア, 2 k, 3 g, 4 s, 5 z, 6 t, 7 d, 8 n, 9 h, 0 b. Upper half 51–95: tens 5–9 = a i u e o; units 1 p, 2 m, 3 y, 4 r; 55 = ワ, 65 = ン. It is not the table of the incoming telegrams (below). In full, with the reading: [docs/READING1901B.en.md](docs/READING1901B.en.md).
@@ -80,6 +86,7 @@ This repository records the reconstruction of a cipher used by the Imperial Japa
 No images are included. Sources are cited by JACAR (Japan Center for Asian Historical Records) reference code and frame number; see [SOURCES.en.md](SOURCES.en.md).
 
 ## Update history
+- 2026-11-11: added three drafts of the same binder (C09122813500, C09122814000, C09122815900; [docs/READING1901C.en.md](docs/READING1901C.en.md), [src/table1901c.py](src/table1901c.py)): 68 = 一 in the incoming table, and a third table in June. The earlier tables and readings are unchanged. The open points (docs/OPEN.en.md §1, §1b) were updated.
 - 2026-11-10 (third update): in the five outgoing drafts the five values outside the table are now read as word codes (99 = Russia, 60 = China, 80 = minister agree with a Foreign Ministry record; 89 = Germany and 59 = government are conjecture). Pairs counted as read changed from 130 to 137 (of 148). The first group of C09122809400 changed from "digits not settled" to "99506". The reading 決マラザレバ in C09122812300 was withdrawn because the readers disagree on the romaji.
 - 2026-11-10 (second update): the five drafts sent out by the General Staff changed from "unread" to "two full readings, three partial readings" (outgoing table added; before, no pair had a value, now 138 of 148 pairs).
 - 2026-11-10: the 1901 table added. C09122806100 changed from "unread" to "partly readable with the 1901 table" (ンチワ, フクム, テンシヨク; before, no pair had a value). The pairing of its first run moved by one digit (04 56 71 … → 45 67 18 …).
