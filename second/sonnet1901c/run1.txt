@@ -1,0 +1,10 @@
+# Second readings of 2026-11-21 (Claude Sonnet 5.5; given the image of the message field only, with second/PROMPT1901.md translated into Japanese; neither the first reading, the table nor the translation)
+# C09122800900, frame 0152
+06192 72945 henkasyote 6810
+jiwaikani tashibana
+# reader's note: first digit 0, hesitating with 6 {0/6}; the first letter of line 2 could also be i or g
+# C09122810200, frame 0353
+Googai 16253 222
+ichimanyen saranizoka aretsi
+yamaguchi
+# reader's note: a dot-like mark between 5 and 3 in 16253

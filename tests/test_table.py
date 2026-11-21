@@ -30,6 +30,19 @@ class TestTable(unittest.TestCase):
         # 1回目の 〇九 のままなら 11/12
         self.assertEqual(T.agreement(['09' if x == '04' else x for x in g], p), 11)
 
+    def test_C09122800900_june_1901(self):
+        g, p = T.TELEGRAMS['C09122800900']
+        self.assertEqual(T.decode(g), p)
+        self.assertEqual(T.agreement(g, p), 7)
+
+    def test_table1901c_is_the_same_grid(self):
+        import table1901c as C
+        inv = T.inverse(T.table())
+        shared = [k for k in C.TABLE if '%02d' % k in inv]
+        self.assertEqual(len(shared), 65)
+        for k in shared:
+            self.assertEqual(C.TABLE[k], inv['%02d' % k])
+
     def test_shuffle_control(self):
         for rc, seed in T.SEEDS.items():
             g, p = T.TELEGRAMS[rc]

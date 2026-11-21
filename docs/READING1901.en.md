@@ -49,3 +49,14 @@ The image of C09122724200 is poor. The first digit of the second group, the fift
 
 ## The five drafts sent out by the General Staff, same layout
 Five drafts from the General Staff (Maj.-Gen. Tamura) to Maj.-Gen. Fukushima (C09122808300, C09122808400, C09122809400, C09122810100, C09122812300) have the same layout, but this table does not read them. On 2026-11-10 they were found to be read by a different table (a grid: tens digit = vowel row, units digit = consonant column). Table and reading: [READING1901B.en.md](READING1901B.en.md).
+
+## Addition (2026-11-21): the incoming telegram of 8 March, C09122810200
+Brice Dudout pointed out this telegram in ledger issue #611 (14 November 2026). Here the whole message was transcribed from the image. It is not counted among the "build" or "test" telegrams above.
+
+| Reference, frame | Date, sender | Message | Reading with the table | Translation |
+|---|---|---|---|---|
+| C09122810200, frame 0353 (form), 0350-0351 (translation) | 8 March 1901, Taku, Lt.-Gen. Yamaguchi to the Chief of the General Staff | Googai `16253 222` / ichimanyen saranizoka arit(a)si / yamaguchi | キミツヒ | 号外 機密費一万円更ニ増加アリタシ ("extra: please increase the secret fund by a further 10,000 yen") |
+
+- 16 25 32 22 = キミツヒ (機密費, secret fund). 4/4. With 1,000 random rearrangements of the 68 kana of the table, none gave all four. The 1902 table gives チヌ?ユ, no sense.
+- Digits: the first reading (Claude Fable 5.2) and a Claude Sonnet 5.5 reader given neither the answer nor the table agree on all 8 digits, and both agree with Dudout's transcription of 28 October 2026, made separately. OpenAI Codex was not used (its login had expired on 21 November 2026). No human has checked the transcription.
+- In "aritsi" an "a" is written above, between t and s (アリタシ).

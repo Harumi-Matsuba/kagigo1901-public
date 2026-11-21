@@ -28,6 +28,7 @@ class TestTable1901(unittest.TestCase):
     def test_held_out_telegrams(self):
         self.assertEqual(T.agreement('test'), (16, 16))
         self.assertEqual(T.agreement('build'), (42, 42))
+        self.assertEqual(T.agreement('later'), (4, 4))
 
     def test_control(self):
         real, ge, best = T.control('test', n=1000)

@@ -28,3 +28,13 @@ Added on 11 November 2026. These three drafts follow the five drafts to Maj.-Gen
 
 ## Human check
 No human has checked the transcriptions. The readings are by AI (first reader Claude Opus 5.5, second reader OpenAI Codex gpt-6-astra, reasoning high).
+
+## Addition (2026-11-21): the "third table" is the table of 1902-04; the incoming telegram of 6 June, C09122800900
+- **The third table above (src/table1901c.py) is the same table as that of 1902-04** ([READING.en.md](READING.en.md), src/table1902.py). All 65 cells present in both (64 kana and ン) have the same value. The only differences: this one has the パ column (55 65 75 85 95; ペ = 85 in 北京), and the 1902 table has ヲ = 40 (checked in tests/test_table.py). The version of 11 November described it as a separate table without noticing this.
+- **C09122800900 (6 June 1901, from Taku, Maj. Tachibana to the General Staff, frame 0152).** Brice Dudout pointed out in ledger issue #611 (14 November 2026) that this telegram is read by the 1902 table. Here the whole message was transcribed from the image.
+  - Message (two lines): `06192 72945` henk..jote `6810` / jiwaikani tachibana. These are the only digits (14 digits = 7 pairs).
+  - Contemporary translation written on the form: 隊数ノ変化上デ人事ハ如何 ("with the change in the number of units, what about personnel?").
+  - Reading with the table: 06 19 27 29 45 = タイスウノ (隊数ノ), 68 10 = ジン (人; the following plain "ji" is 事). 7/7. With 1,000 tables whose row and column digits were permuted, none matched all 7 pairs (maximum 4). The incoming table (00-67) gives ダジウグテ・パ, no sense.
+  - Digits: the first reading (Claude Fable 5.2) and a Claude Sonnet 5.5 reader given neither the answer nor the table agree on all 14 digits (Sonnet hesitated between 0 and 6 for the first digit). They also agree with Dudout's transcription of 28 October 2026, made separately (`06192 72945 … 6810`). OpenAI Codex was not used (its login had expired on 21 November 2026). The romanised word henk..jote (変化上デ) is blurred: first reading henkwajote, Sonnet henkasyote.
+- **When the table changed.** The incoming table (00-67) is last seen on 31 May (C09122813500, Vice-Chief to Lt.-Gen. Yamaguchi); the 1902 table is first seen on 3 June (C09122814000, Vice-Chief to Maj. Tachibana), and the telegram from Tachibana of 6 June (this one) also uses it. For the traffic with Tientsin the change therefore falls between 31 May and 3 June. The addressees of 31 May and 3 June differ (Yamaguchi, Tachibana), so a different table per correspondent is not excluded.
+- No human has checked the transcription.
